@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TranslateApplication.Views.SearchPage"
+             BackgroundColor="#343f56"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame  HeightRequest="40" VerticalOptions="Start">
+                <Frame.Background>
+                    <LinearGradientBrush >
+                        <GradientStop Color="#f54748"
+                                                                         Offset="0.1"/>
+                        <GradientStop Color="#c84b31"
+                                                                         Offset="0.3"/>
+                    </LinearGradientBrush>
+                </Frame.Background>
+                <StackLayout Orientation="Horizontal">
+                    <Label x:Name="seviye" Text="Seviye 1" FontAttributes="Bold" VerticalOptions="Center" TextColor="#f1f1f1" FontSize="30" HorizontalOptions="StartAndExpand"></Label>
+                    <StackLayout>
+                        <Label x:Name="highScore" FontSize="20" TextColor="#FFD700" HorizontalOptions="Center" VerticalOptions="StartAndExpand" FontAttributes="Bold"></Label>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="End">
+                        <Label Text="Puan:" FontSize="20" TextColor="#A5EB78" HorizontalOptions="Center" FontAttributes="Bold"></Label>
+                        <Label x:Name="point" Text="0" FontSize="20" TextColor="#A5EB78" HorizontalOptions="Center" FontAttributes="Bold"></Label>
+                    </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+
+            <Frame CornerRadius="30" Margin="10,10,10,10" BackgroundColor="#f54748" HasShadow="True">
+                <Frame.Background>
+                    <RadialGradientBrush >
+                        <GradientStop Color="#f54748"
+                                                                         Offset="0.1"/>
+                        <GradientStop Color="#eba83a"
+                                                                         Offset="0.3"/>
+                    </RadialGradientBrush>
+                </Frame.Background>
+                <StackLayout>
+                    <Label x:Name="questionWord" Text="play" FontSize="20" TextColor="#f1f1f1" HorizontalOptions="Center" FontAttributes="Bold"></Label>
+                </StackLayout>
+            </Frame>
+            <Label x:Name="resultText" FontSize="25" TextColor="#A5EB78" HorizontalOptions="Center"></Label>
+
+            <Frame BackgroundColor="#f1f1f1" Margin="10,10" Padding="0" CornerRadius="10">
+                <Frame.Background>
+                    <LinearGradientBrush >
+                        <GradientStop Color="#f1f1f1"
+                                                                         Offset="0.1"/>
+                        <GradientStop Color="#f5e6ca"
+                                                                         Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Frame.Background>
+                <StackLayout VerticalOptions="Center">
+                    <Entry x:Name="searchWord" Keyboard="Default"  WidthRequest="300" HeightRequest="60" FontSize="20" BackgroundColor="#eeeeee" PlaceholderColor="#eba83a" Placeholder="Cevabını buraya yaz.." HorizontalTextAlignment="Center" TextColor="#f54748" FontAttributes="Bold"></Entry>
+                    <ImageButton x:Name="button" Clicked="Button_Clicked" Source="check.png" HeightRequest="60" BackgroundColor="#f54748" Padding="0" ></ImageButton>
+                </StackLayout>
+            </Frame>
+            <StackLayout Margin="10,0" VerticalOptions="Center">
+                <Label x:Name="word" TextColor="#f5e6ca" FontAttributes="Bold" FontSize="14"></Label>
+                <Label x:Name="anlamDetail" TextColor="#f5e6ca" FontAttributes="Bold" FontSize="14"></Label>
+            </StackLayout>
+            <Image Source="logo.png" HeightRequest="130" Margin="0"></Image>
+            <Label Text="Yandex Translator App" HorizontalOptions="Center" Opacity="0.5" TextColor="#f1f1f1" FontSize="15" FontAttributes="Italic"></Label>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
