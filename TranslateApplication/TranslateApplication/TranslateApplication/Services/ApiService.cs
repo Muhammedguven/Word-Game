@@ -12,10 +12,10 @@ namespace TranslateApplication.Services
     public class ApiService
     {
         string YANDEX_BASE_URL = "https://translate.yandex.net/api/v1.5/tr.json/translate";
-        string YANDEX_API_KEY = "trnsl.1.1.20210518T143143Z.4bf6b398673151bb.98fb148e4634865016f8c6d3c8b786c2f6050857";
+        string YANDEX_API_KEY = YOUR YANDEX API KEY;
 
         string COLLECT_BASE_URL = "https://api.collectapi.com/dictionary/wordSearchTurkish?query=";
-        string COLLECT_API_KEY = "apikey 1Rwyhetg6MpJttceWMDKIT:1j1xgssi7ZIM9Hyt9RE1hN";
+        string COLLECT_API_KEY = "apikey YOUR COLLECT API KEY";
 
         HttpClient client = new HttpClient();
         public async Task<YandexApiModel> GetWordAsync(string word, string lang, string langTo)
